@@ -4,6 +4,6 @@ return [
 
     'title' => 'Our Library',
     'authors' => 'Authors',
-    'publishers' => 'Publishers',
+    'publisher' => 'Publisher',
 
 ];
