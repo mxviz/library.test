@@ -100,9 +100,9 @@ POST /api/books
 
 | Parameter | Type | Description |
 | :--- | :--- | :--- |
-| `title` | `string` | **Required**. Book title |
-| `publishers` | `array` | **Required**. Publishers ID |
-| `authors` | `array` | **Required**. Authors ID |
+| `title` | `string` | **Required**. Book title. Must be unique |
+| `publishers` | `array` | **Required**. Publishers ID. Each element of array must exists in table 'publishers' |
+| `authors` | `array` | **Required**. Authors ID. Each element of array must exists in table 'authors' |
 
 3. Update book
 
@@ -113,8 +113,8 @@ PUT /api/books/{book_id}
 | Parameter | Type | Description |
 | :--- | :--- | :--- |
 | `book_id` | `int` | **Required**. Book ID |
-| `title` | `string` | Book title |
-| `authors` | `array` | Authors ID |
+| `title` | `string` | Book title. Must be unique |
+| `authors` | `array` | Authors ID. Each element of array must exists in table 'publishers'. All existed values will be replaced with new |
 
 4. Delete book
 
