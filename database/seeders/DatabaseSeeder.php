@@ -21,8 +21,8 @@ class DatabaseSeeder extends Seeder
         $authors = Author::factory()->count(10)->create();
 
         Book::factory()->count(30)->create()->each(function($book) use ($publishers, $authors) {
-            $publishersId = $publishers->random(5)->pluck('id');
-            $authorsId = $authors->random(3)->pluck('id');
+            $publishersId = $publishers->random( rand(1,5) )->pluck('id');
+            $authorsId = $authors->random( rand(1,3) )->pluck('id');
 
             $book->publishers()->attach($publishersId);
             $book->authors()->attach($authorsId);
