@@ -9,7 +9,7 @@ class BookController extends Controller
 {
     public function index()
     {
-        $books = Book::with(['publishers','authors'])->get();
+        $books = Book::with(['publishers','authors'])->paginate(5);
 
         return view('books_list',['books' => $books]);
     }
