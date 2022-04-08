@@ -45,6 +45,14 @@ npm install && npm run dev
 - Many-To-Many 'books' with 'publishers' (table 'book_publisher')
 - Many-To-Many 'authors' with 'books' (table 'author_book')
 
+#### Database seed
+
+Tou can seed fields made by faker in database with this command
+
+```
+php artisan migrate --seed
+```
+
 ### API methods
 
 ---
