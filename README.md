@@ -109,7 +109,7 @@ POST /api/books
 | Parameter | Type | Description |
 | :--- | :--- | :--- |
 | `title` | `string` | **Required**. Book title. Must be unique |
-| `publishers` | `array` | **Required**. Publishers ID. Each element of array must exists in table 'publishers' |
+| `publisher_id` | `int` | **Required**. Publisher ID. Must be exists in table 'publishers' |
 | `authors` | `array` | **Required**. Authors ID. Each element of array must exists in table 'authors' |
 
 3. Update book
